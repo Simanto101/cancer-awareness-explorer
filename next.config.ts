@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   assetPrefix: basePath,
   trailingSlash: true,
   images: { unoptimized: true },
+  allowedDevOrigins: ["*.monkeycode-ai.live"],
 };
 
 export default nextConfig;
