@@ -6,7 +6,7 @@
       "name_bn": "ত্বক",
       "model_mesh_id": "skin",
       "model": { "type": "ring", "position": { "x": 0.2, "y": 1.05, "z": 0.28 }, "scale": 0.07 },
-      "cancers": []
+      "cancers": ["skin-basal", "skin-squamous", "skin-melanoma", "skin-merkel", "skin-lymphoma", "skin-dfsp"]
     },
     {
       "id": "breast",
@@ -106,7 +106,7 @@
       "name_bn": "মূত্রাশয়",
       "model_mesh_id": "bladder",
       "model": { "type": "sphere", "position": { "x": 0, "y": 0.62, "z": 0.18 }, "scale": 0.08 },
-      "cancers": []
+      "cancers": ["bladder-urothelial", "bladder-squamous", "bladder-adeno", "bladder-small-cell"]
     },
     {
       "id": "thyroid",
@@ -138,7 +138,7 @@
       "name_bn": "খাদ্যনালী",
       "model_mesh_id": "esophagus",
       "model": { "type": "sphere", "position": { "x": 0, "y": 1.4, "z": 0.07 }, "scale": 0.06 },
-      "cancers": []
+      "cancers": ["esophagus-squamous", "esophagus-adeno", "esophagus-small-cell", "esophagus-net"]
     },
     {
       "id": "larynx",
@@ -1160,6 +1160,329 @@
       ],
       "sources": [
         { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/kidney" }
+      ]
+    },
+    {
+      "id": "skin-basal",
+      "name_en": "Basal Cell Carcinoma",
+      "name_bn": "বেসাল সেল কার্সিনোমা",
+      "organ_id": "skin",
+      "description_en": "The most common skin cancer, growing slowly in the outer layer of skin; rarely spreads.",
+      "description_bn": "সবচেয়ে সাধারণ ত্বক ক্যান্সার; ত্বকের বাইরের স্তরে ধীরে বাড়ে; খুব কমই ছড়ায়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A pearly or waxy bump on the skin", "text_bn": "ত্বকে মুক্তার মতো বা মোমের মতো দলা" },
+        { "text_en": "A flat, flesh-colored or brown scar-like lesion", "text_bn": "চ্যাপ্টা, মাংসের রঙের বা বাদামি দাগের মতো ক্ষত" },
+        { "text_en": "A sore that bleeds or does not heal", "text_bn": "যে ঘা থেকে রক্ত পড়ে বা সারে না" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend limiting sun exposure and using sunscreen", "text_bn": "অনেক চিকিৎসক রোদে থাকা সীমিত করার ও সানস্ক্রিন ব্যবহারের পরামর্শ দেন" },
+        { "text_en": "Avoid tanning beds", "text_bn": "ট্যানিং বেড এড়িয়ে চলুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new growth or sore that does not heal", "text_bn": "নতুন বৃদ্ধি বা ঘা যা সারে না" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Skin Cancer", "url": "https://www.cancer.org/cancer/types/skin-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/skin" }
+      ]
+    },
+    {
+      "id": "skin-squamous",
+      "name_en": "Squamous Cell Skin Carcinoma",
+      "name_bn": "স্কোয়ামাস সেল স্কিন কার্সিনোমা",
+      "organ_id": "skin",
+      "description_en": "The second most common skin cancer, arising in the flat cells of the outer skin; can spread if untreated.",
+      "description_bn": "দ্বিতীয় সবচেয়ে সাধারণ ত্বক ক্যান্সার; ত্বকের বাইরের চ্যাপ্টা কোষে উৎপন্ন হয়; চিকিৎসা না করলে ছড়াতে পারে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A firm red nodule", "text_bn": "শক্ত লাল পিণ্ড" },
+        { "text_en": "A flat sore with a scaly, crusted surface", "text_bn": "আঁশযুক্ত, খসখসে পৃষ্ঠের চ্যাপ্টা ঘা" },
+        { "text_en": "A non-healing sore or a changing wart", "text_bn": "না-সেরা ঘা বা পরিবর্তনশীল আঁচিল" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend sun protection and avoiding tanning beds", "text_bn": "অনেক চিকিৎসক সূর্য সুরক্ষা ও ট্যানিং বেড এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A sore that does not heal or a changing growth", "text_bn": "ঘা যা সারে না বা পরিবর্তনশীল বৃদ্ধি" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Skin Cancer", "url": "https://www.cancer.org/cancer/types/skin-cancer.html" }
+      ]
+    },
+    {
+      "id": "skin-melanoma",
+      "name_en": "Melanoma",
+      "name_bn": "মেলানোমা",
+      "organ_id": "skin",
+      "description_en": "A serious skin cancer that begins in pigment-producing cells (melanocytes); can spread to other parts of the body.",
+      "description_bn": "রঞ্জক উৎপাদনকারী কোষে (মেলানোসাইট) শুরু হওয়া গুরুতর ত্বক ক্যান্সার; শরীরের অন্য অংশে ছড়াতে পারে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A new mole or a change in an existing mole", "text_bn": "নতুন তিল বা বিদ্যমান তিলের পরিবর্তন" },
+        { "text_en": "A mole with uneven borders or multiple colors", "text_bn": "অসম প্রান্ত বা একাধিক রঙের তিল" },
+        { "text_en": "A mole larger than a pencil eraser", "text_bn": "পেন্সিল রাবার থেকে বড় তিল" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend sun protection and regular skin self-checks", "text_bn": "অনেক চিকিৎসক সূর্য সুরক্ষা ও নিয়মিত ত্বক স্ব-পরীক্ষার পরামর্শ দেন" },
+        { "text_en": "Avoid tanning beds and report any changing mole", "text_bn": "ট্যানিং বেড এড়িয়ে চলুন এবং যেকোনো পরিবর্তনশীল তিল জানান" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new or changing mole, especially with irregular shape or color", "text_bn": "নতুন বা পরিবর্তনশীল তিল, বিশেষত অসম আকার বা রঙ হলে" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Melanoma", "url": "https://www.cancer.org/cancer/types/melanoma-skin-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/skin/melanoma" }
+      ]
+    },
+    {
+      "id": "skin-merkel",
+      "name_en": "Merkel Cell Carcinoma",
+      "name_bn": "মার্কেল সেল কার্সিনোমা",
+      "organ_id": "skin",
+      "description_en": "A rare and aggressive skin cancer linked to sun exposure and a common virus.",
+      "description_bn": "বিরল ও আক্রমণাত্মক ত্বক ক্যান্সার; রোদে থাকা ও একটি সাধারণ ভাইরাসের সাথে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A fast-growing, painless lump on sun-exposed skin", "text_bn": "রোদে পোড়া ত্বকে দ্রুত বাড়তে থাকা ব্যথাহীন গোটা" },
+        { "text_en": "A red, purple, or flesh-colored nodule", "text_bn": "লাল, বেগুনি বা মাংসের রঙের পিণ্ড" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend sun protection and reporting any new lump", "text_bn": "অনেক চিকিৎসক সূর্য সুরক্ষা ও যেকোনো নতুন গোটা জানানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A rapidly growing painless lump", "text_bn": "দ্রুত বাড়তে থাকা ব্যথাহীন গোটা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Merkel Cell Carcinoma", "url": "https://www.cancer.org/cancer/types/merkel-cell-carcinoma.html" }
+      ]
+    },
+    {
+      "id": "skin-lymphoma",
+      "name_en": "Cutaneous Lymphoma",
+      "name_bn": "কিউটেনিয়াস লিম্ফোমা",
+      "organ_id": "skin",
+      "description_en": "A rare cancer of immune cells that first appears in the skin; mycosis fungoides is one form.",
+      "description_bn": "ইমিউন কোষের বিরল ক্যান্সার যা প্রথমে ত্বকে দেখা দেয়; মাইকোসিস ফাংগোয়েডস এর একটি রূপ।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Patches or plaques of discolored, itchy skin", "text_bn": "রঙ-পরিবর্তিত, চুলকানি ত্বকের দাগ বা স্তর" },
+        { "text_en": "Raised bumps or tumors on the skin", "text_bn": "ত্বকে উঁচু দলা বা টিউমার" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent itchy or discolored skin patches that do not improve", "text_bn": "স্থায়ী চুলকানি বা রঙ-পরিবর্তিত ত্বকের দাগ যা উন্নত হয় না" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lymphoma", "url": "https://www.cancer.org/cancer/types/lymphoma.html" }
+      ]
+    },
+    {
+      "id": "skin-dfsp",
+      "name_en": "Dermatofibrosarcoma Protuberans (DFSP)",
+      "name_bn": "ডার্মাটোফাইব্রোসারকোমা প্রোটুবারানস (ডিএফএসপি)",
+      "organ_id": "skin",
+      "description_en": "A rare, slow-growing cancer of the deep layers of the skin.",
+      "description_bn": "ত্বকের গভীর স্তরের বিরল, ধীরে বর্ধনশীল ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A firm lump or nodule under the skin that grows slowly", "text_bn": "ত্বকের নিচে ধীরে বাড়তে থাকা শক্ত দলা বা পিণ্ড" },
+        { "text_en": "Discolored, plaque-like skin area", "text_bn": "রঙ-পরিবর্তিত, ফলক-সদৃশ ত্বকের অংশ" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A growing lump or nodule under the skin", "text_bn": "ত্বকের নিচে বাড়তে থাকা দলা বা পিণ্ড" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/skin" }
+      ]
+    },
+    {
+      "id": "bladder-urothelial",
+      "name_en": "Urothelial (Transitional Cell) Carcinoma",
+      "name_bn": "ইউরোথেলিয়াল (ট্রানজিশনাল সেল) কার্সিনোমা",
+      "organ_id": "bladder",
+      "description_en": "The most common type of bladder cancer, arising in the cells lining the inside of the bladder.",
+      "description_bn": "সবচেয়ে সাধারণ মূত্রাশয় ক্যান্সার; মূত্রাশয়ের ভেতরের আস্তরণের কোষে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Blood in the urine (often painless)", "text_bn": "প্রস্রাবে রক্ত (প্রায়ই ব্যথাহীন)" },
+        { "text_en": "Frequent or painful urination", "text_bn": "বারবার বা বেদনাদায়ক প্রস্রাব" },
+        { "text_en": "Pelvic or back pain", "text_bn": "শ্রোণি বা পিঠে ব্যথা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend not smoking", "text_bn": "অনেক চিকিৎসক ধূমপান না করার পরামর্শ দেন" },
+        { "text_en": "Limit exposure to certain workplace chemicals", "text_bn": "নির্দিষ্ট কর্মক্ষেত্রের রাসায়নিকের সংস্পর্শ সীমিত করুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "Persistent painful or frequent urination", "text_bn": "স্থায়ী বেদনাদায়ক বা বারবার প্রস্রাব" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Bladder Cancer", "url": "https://www.cancer.org/cancer/types/bladder-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/bladder" }
+      ]
+    },
+    {
+      "id": "bladder-squamous",
+      "name_en": "Squamous Cell Carcinoma of the Bladder",
+      "name_bn": "মূত্রাশয়ের স্কোয়ামাস সেল কার্সিনোমা",
+      "organ_id": "bladder",
+      "description_en": "A less common bladder cancer linked to long-term irritation or infections.",
+      "description_bn": "কম সাধারণ মূত্রাশয় ক্যান্সার; দীর্ঘমেয়াদি জ্বালা বা সংক্রমণের সাথে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "Painful or frequent urination", "text_bn": "বেদনাদায়ক বা বারবার প্রস্রাব" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco", "text_bn": "অনেক চিকিৎসক তামাক এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the urine or persistent urinary symptoms", "text_bn": "প্রস্রাবে রক্ত বা স্থায়ী প্রস্রাবের লক্ষণ" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/bladder" }
+      ]
+    },
+    {
+      "id": "bladder-adeno",
+      "name_en": "Adenocarcinoma of the Bladder",
+      "name_bn": "মূত্রাশয়ের অ্যাডেনোকার্সিনোমা",
+      "organ_id": "bladder",
+      "description_en": "A rare bladder cancer arising from glandular cells.",
+      "description_bn": "গ্রন্থি কোষে উৎপন্ন বিরল মূত্রাশয় ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "Painful urination or mucus in the urine", "text_bn": "বেদনাদায়ক প্রস্রাব বা প্রস্রাবে শ্লেষ্মা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the urine or persistent urinary symptoms", "text_bn": "প্রস্রাবে রক্ত বা স্থায়ী প্রস্রাবের লক্ষণ" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/bladder" }
+      ]
+    },
+    {
+      "id": "bladder-small-cell",
+      "name_en": "Small Cell Carcinoma of the Bladder",
+      "name_bn": "মূত্রাশয়ের স্মল সেল কার্সিনোমা",
+      "organ_id": "bladder",
+      "description_en": "A rare and aggressive bladder cancer.",
+      "description_bn": "বিরল ও আক্রমণাত্মক মূত্রাশয় ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "Painful urination or pelvic pain", "text_bn": "বেদনাদায়ক প্রস্রাব বা শ্রোণিতে ব্যথা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco", "text_bn": "অনেক চিকিৎসক তামাক এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the urine or persistent pain", "text_bn": "প্রস্রাবে রক্ত বা স্থায়ী ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/bladder" }
+      ]
+    },
+    {
+      "id": "esophagus-squamous",
+      "name_en": "Esophageal Squamous Cell Carcinoma",
+      "name_bn": "খাদ্যনালীর স্কোয়ামাস সেল কার্সিনোমা",
+      "organ_id": "esophagus",
+      "description_en": "The most common esophageal cancer in many parts of the world, linked to smoking and alcohol.",
+      "description_bn": "বিশ্বের অনেক অঞ্চলে সবচেয়ে সাধারণ খাদ্যনালী ক্যান্সার; ধূমপান ও অ্যালকোহলের সাথে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Difficulty swallowing, first with solids then liquids", "text_bn": "গিলতে অসুবিধা, প্রথমে শক্ত খাবারে তারপর তরলে" },
+        { "text_en": "Chest pain or burning", "text_bn": "বুকে ব্যথা বা জ্বালা" },
+        { "text_en": "Weight loss or hoarseness", "text_bn": "ওজন হ্রাস বা কর্কশ ভাব" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco and limiting alcohol", "text_bn": "অনেক চিকিৎসক তামাক এড়ানো ও অ্যালকোহল সীমিত করার পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Difficulty swallowing or food getting stuck", "text_bn": "গিলতে অসুবিধা বা খাবার আটকে যাওয়া" },
+        { "text_en": "Unexplained weight loss or persistent chest pain", "text_bn": "অব্যক্ত ওজন হ্রাস বা স্থায়ী বুকে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Esophageal Cancer", "url": "https://www.cancer.org/cancer/types/esophagus-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/esophageal" }
+      ]
+    },
+    {
+      "id": "esophagus-adeno",
+      "name_en": "Esophageal Adenocarcinoma",
+      "name_bn": "খাদ্যনালীর অ্যাডেনোকার্সিনোমা",
+      "organ_id": "esophagus",
+      "description_en": "A type of esophageal cancer linked to chronic acid reflux (Barrett's esophagus), more common in the lower esophagus.",
+      "description_bn": "দীর্ঘস্থায়ী এসিড রিফ্লাক্সের (বারেটস এসোফাগাস) সাথে যুক্ত খাদ্যনালী ক্যান্সার; নিচের খাদ্যনালীতে বেশি হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Difficulty swallowing", "text_bn": "গিলতে অসুবিধা" },
+        { "text_en": "Heartburn or indigestion that worsens", "text_bn": "বুক জ্বালা বা বদহজম যা বাড়তে থাকে" },
+        { "text_en": "Chest pain or weight loss", "text_bn": "বুকে ব্যথা বা ওজন হ্রাস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend managing chronic acid reflux and maintaining a healthy weight", "text_bn": "অনেক চিকিৎসক দীর্ঘস্থায়ী এসিড রিফ্লাক্স নিয়ন্ত্রণ ও সুস্থ ওজন বজায় রাখার পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Difficulty swallowing or worsening heartburn", "text_bn": "গিলতে অসুবিধা বা বাড়তে থাকা বুক জ্বালা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Esophageal Cancer", "url": "https://www.cancer.org/cancer/types/esophagus-cancer.html" }
+      ]
+    },
+    {
+      "id": "esophagus-small-cell",
+      "name_en": "Small Cell Carcinoma of the Esophagus",
+      "name_bn": "খাদ্যনালীর স্মল সেল কার্সিনোমা",
+      "organ_id": "esophagus",
+      "description_en": "A rare and aggressive esophageal cancer.",
+      "description_bn": "বিরল ও আক্রমণাত্মক খাদ্যনালী ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Difficulty swallowing", "text_bn": "গিলতে অসুবিধা" },
+        { "text_en": "Chest pain or weight loss", "text_bn": "বুকে ব্যথা বা ওজন হ্রাস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco and alcohol", "text_bn": "অনেক চিকিৎসক তামাক ও অ্যালকোহল এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Difficulty swallowing or persistent chest pain", "text_bn": "গিলতে অসুবিধা বা স্থায়ী বুকে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/esophageal" }
+      ]
+    },
+    {
+      "id": "esophagus-net",
+      "name_en": "Neuroendocrine Tumor of the Esophagus",
+      "name_bn": "খাদ্যনালীর নিউরোএন্ডোক্রাইন টিউমার",
+      "organ_id": "esophagus",
+      "description_en": "A very rare, usually slow-growing tumor of the esophagus.",
+      "description_bn": "খাদ্যনালীর অত্যন্ত বিরল, সাধারণত ধীরে বর্ধনশীল টিউমার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Difficulty swallowing", "text_bn": "গিলতে অসুবিধা" },
+        { "text_en": "Chest discomfort or bleeding", "text_bn": "বুকে অস্বস্তি বা রক্তক্ষরণ" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Difficulty swallowing or persistent chest discomfort", "text_bn": "গিলতে অসুবিধা বা স্থায়ী বুকে অস্বস্তি" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/esophageal" }
       ]
     }
   ]
