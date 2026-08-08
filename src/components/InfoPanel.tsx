@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import type { Organ, CancerType } from "@/lib/types";
 import { getCancersForOrgan } from "@/lib/loadData";
-import { useT, type Trans } from "@/lib/i18n";
+import { useT, useLang, type Trans } from "@/lib/i18n";
 import type { StageLevel } from "@/lib/stages";
 import StageControl from "./StageControl";
+import { useSpeech } from "@/lib/useSpeech";
 
 const hdrCancerTypes: Trans = {
   en: "Cancer types of this organ",
@@ -35,6 +36,22 @@ const closing: Trans = {
   en: "Close",
   bn: "বন্ধ করুন",
 };
+const ttsPlay: Trans = {
+  en: "Read aloud",
+  bn: "উচ্চস্বরে পড়ুন",
+};
+const ttsStop: Trans = {
+  en: "Stop reading",
+  bn: "পড়া বন্ধ করুন",
+};
+const ttsUnsupported: Trans = {
+  en: "Audio not supported in this browser",
+  bn: "এই ব্রাউজারে অডিও সমর্থিত নয়",
+};
+const disclaimerFooter: Trans = {
+  en: "Remember, this tool is for education only and is not medical advice or a diagnosis.",
+  bn: "মনে রাখবেন, এই টুলটি শুধুমাত্র শিক্ষার জন্য এবং এটি চিকিৎসা পরামর্শ বা রোগ নির্ণয় নয়।",
+};
 
 function InfoPanel({
   organ,
@@ -48,30 +65,79 @@ function InfoPanel({
   onClose: () => void;
 }) {
   const t = useT();
+  const { lang } = useLang();
+  const { speak, cancel, speaking, supported } = useSpeech();
   const cancers = getCancersForOrgan(organ.id);
   const [activeId, setActiveId] = useState<string | null>(
     cancers.length > 0 ? cancers[0].id : null
   );
   const active: CancerType | null = cancers.find((c) => c.id === activeId) ?? null;
 
+  React.useEffect(() => {
+    return () => cancel();
+  }, [cancel, activeId]);
+
+  const buildReadingText = (): string => {
+    const parts: string[] = [];
+    parts.push(lang === "en" ? organ.name_en : organ.name_bn);
+    if (active) {
+      parts.push(lang === "en" ? active.description_en : active.description_bn);
+      parts.push(t(hdrSymptoms));
+      active.symptoms.forEach((s) => parts.push(lang === "en" ? s.text_en : s.text_bn));
+      parts.push(t(hdrWhenToSee));
+      active.when_to_see_doctor.forEach((s) =>
+        parts.push(lang === "en" ? s.text_en : s.text_bn)
+      );
+      parts.push(t(hdrPrevention));
+      active.general_prevention_tips.forEach((s) =>
+        parts.push(lang === "en" ? s.text_en : s.text_bn)
+      );
+    }
+    parts.push(t(disclaimerFooter));
+    return parts.join(". ");
+  };
+
+  const toggleSpeech = () => {
+    if (speaking) {
+      cancel();
+    } else {
+      speak(buildReadingText(), lang);
+    }
+  };
+
   return (
     <div className="pointer-events-auto flex h-full w-full flex-col overflow-hidden rounded-t-2xl border-t border-slate-700 bg-slate-900/95 shadow-2xl backdrop-blur md:rounded-r-2xl md:rounded-t-none md:border-l md:border-t-0">
       <div className="flex items-start justify-between gap-3 border-b border-slate-700/70 px-4 py-3">
-        <div>
-          <h2 className="text-lg font-semibold text-slate-50">
+        <div className="min-w-0">
+          <h2 className="truncate text-lg font-semibold text-slate-50">
             {t({ en: organ.name_en, bn: organ.name_bn })}
           </h2>
           <p className="text-[11px] uppercase tracking-wider text-teal-400">
             {t(hdrCancerTypes)}
           </p>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="shrink-0 rounded-full bg-slate-700 px-3 py-1 text-xs font-medium text-slate-200 hover:bg-slate-600"
-        >
-          {t(closing)}
-        </button>
+        <div className="flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleSpeech}
+            disabled={!supported}
+            className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
+              speaking
+                ? "bg-red-500 text-white hover:bg-red-400"
+                : "bg-teal-500 text-slate-950 hover:bg-teal-400"
+            } ${!supported ? "cursor-not-allowed opacity-50" : ""}`}
+            title={supported ? t(speaking ? ttsStop : ttsPlay) : t(ttsUnsupported)}
+          >
+            {speaking ? t(ttsStop) : t(ttsPlay)}
+          </button>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-full bg-slate-700 px-3 py-1 text-xs font-medium text-slate-200 hover:bg-slate-600"
+          >
+            {t(closing)}
+          </button>
+        </div>
       </div>
 
       {cancers.length === 0 ? (
