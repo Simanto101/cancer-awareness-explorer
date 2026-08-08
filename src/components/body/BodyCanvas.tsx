@@ -7,10 +7,12 @@ import * as THREE from "three";
 import BodyModel from "./BodyModel";
 import OrganMarkers from "./OrganMarkers";
 import type { Organ } from "@/lib/types";
+import type { StageLevel } from "@/lib/stages";
 
 type Props = {
   organs: Organ[];
   selectedId: string | null;
+  stage: StageLevel;
   onSelect: (id: string) => void;
 };
 
@@ -37,7 +39,7 @@ function RotatingGroup({
   );
 }
 
-export default function BodyCanvas({ organs, selectedId, onSelect }: Props) {
+export default function BodyCanvas({ organs, selectedId, stage, onSelect }: Props) {
   return (
     <Canvas
       camera={{ position: [0.6, 0.7, 3.4], fov: 42 }}
@@ -49,7 +51,7 @@ export default function BodyCanvas({ organs, selectedId, onSelect }: Props) {
       <directionalLight position={[-3, 1, -2]} intensity={0.35} color="#7dd3fc" />
       <RotatingGroup selectedId={selectedId}>
         <BodyModel />
-        <OrganMarkers organs={organs} selectedId={selectedId} onSelect={onSelect} />
+        <OrganMarkers organs={organs} selectedId={selectedId} stage={stage} onSelect={onSelect} />
       </RotatingGroup>
       <OrbitControls
         enablePan={false}

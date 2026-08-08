@@ -4,17 +4,20 @@ import React, { useState } from "react";
 import { Html } from "@react-three/drei";
 import type { Organ } from "@/lib/types";
 import { useLang } from "@/lib/i18n";
+import { STAGE_VISUALS, type StageLevel } from "@/lib/stages";
+import StageOverlay from "./StageOverlay";
 
 type Props = {
   organs: Organ[];
   selectedId: string | null;
+  stage: StageLevel;
   onSelect: (id: string) => void;
 };
 
 const MARKER_COLOR = "#22d3ee";
 const MARKER_HOVER = "#f59e0b";
 
-export default function OrganMarkers({ organs, selectedId, onSelect }: Props) {
+export default function OrganMarkers({ organs, selectedId, stage, onSelect }: Props) {
   const { lang } = useLang();
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
@@ -24,10 +27,15 @@ export default function OrganMarkers({ organs, selectedId, onSelect }: Props) {
         const p = organ.model.position;
         const hovered = hoveredId === organ.id;
         const selected = selectedId === organ.id;
+        const visual = STAGE_VISUALS[stage];
+        const pos: [number, number, number] = [p.x, p.y, p.z];
         return (
           <group key={organ.id}>
+            {selected && (
+              <StageOverlay position={pos} baseScale={organ.model.scale} visual={visual} />
+            )}
             <mesh
-              position={[p.x, p.y, p.z]}
+              position={pos}
               onClick={(e) => {
                 e.stopPropagation();
                 onSelect(organ.id);
@@ -40,14 +48,18 @@ export default function OrganMarkers({ organs, selectedId, onSelect }: Props) {
             >
               <sphereGeometry args={[organ.model.scale, 16, 16]} />
               <meshBasicMaterial
-                color={selected ? MARKER_HOVER : hovered ? MARKER_HOVER : MARKER_COLOR}
+                color={selected ? visual.color : hovered ? MARKER_HOVER : MARKER_COLOR}
                 transparent
                 opacity={0.9}
               />
             </mesh>
-            <mesh position={[p.x, p.y, p.z]} scale={1.6}>
+            <mesh position={pos} scale={1.6}>
               <sphereGeometry args={[organ.model.scale, 8, 8]} />
-              <meshBasicMaterial color={MARKER_COLOR} transparent opacity={0.12} />
+              <meshBasicMaterial
+                color={selected ? visual.color : MARKER_COLOR}
+                transparent
+                opacity={0.12}
+              />
             </mesh>
             <Html
               position={[p.x, p.y + organ.model.scale + 0.09, p.z]}

@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import type { Organ, CancerType } from "@/lib/types";
 import { getCancersForOrgan } from "@/lib/loadData";
 import { useT, type Trans } from "@/lib/i18n";
+import type { StageLevel } from "@/lib/stages";
+import StageControl from "./StageControl";
 
 const hdrCancerTypes: Trans = {
   en: "Cancer types of this organ",
@@ -36,9 +38,13 @@ const closing: Trans = {
 
 function InfoPanel({
   organ,
+  stage,
+  onStageChange,
   onClose,
 }: {
   organ: Organ;
+  stage: StageLevel;
+  onStageChange: (s: StageLevel) => void;
   onClose: () => void;
 }) {
   const t = useT();
@@ -69,9 +75,15 @@ function InfoPanel({
       </div>
 
       {cancers.length === 0 ? (
-        <div className="p-4 text-sm text-slate-300">{t(noCancers)}</div>
+        <div className="space-y-3 p-4">
+          <StageControl stage={stage} onChange={onStageChange} />
+          <p className="text-sm text-slate-300">{t(noCancers)}</p>
+        </div>
       ) : (
         <div className="flex min-h-0 flex-1 flex-col">
+          <div className="px-3 pt-2.5">
+            <StageControl stage={stage} onChange={onStageChange} />
+          </div>
           <div className="flex gap-1.5 overflow-x-auto border-b border-slate-700/70 px-3 py-2">
             {cancers.map((c) => (
               <button
