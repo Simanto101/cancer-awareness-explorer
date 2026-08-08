@@ -58,7 +58,7 @@
       "name_bn": "প্রোস্টেট",
       "model_mesh_id": "prostate",
       "model": { "type": "sphere", "position": { "x": -0.05, "y": 0.56, "z": 0.16 }, "scale": 0.07 },
-      "cancers": []
+      "cancers": ["prostate-adeno", "prostate-small-cell", "prostate-neuroendocrine"]
     },
     {
       "id": "cervix",
@@ -82,7 +82,7 @@
       "name_bn": "যকৃত",
       "model_mesh_id": "liver",
       "model": { "type": "sphere", "position": { "x": 0.2, "y": 1.12, "z": 0.08 }, "scale": 0.11 },
-      "cancers": []
+      "cancers": ["liver-hcc", "liver-cholangiocarcinoma", "liver-angiosarcoma", "liver-hepatoblastoma", "liver-lymphoma"]
     },
     {
       "id": "pancreas",
@@ -114,7 +114,7 @@
       "name_bn": "থাইরয়েড",
       "model_mesh_id": "thyroid",
       "model": { "type": "sphere", "position": { "x": 0, "y": 1.52, "z": 0.1 }, "scale": 0.06 },
-      "cancers": []
+      "cancers": ["thyroid-papillary", "thyroid-follicular", "thyroid-medullary", "thyroid-anaplastic", "thyroid-lymphoma"]
     },
     {
       "id": "brain",
@@ -578,6 +578,310 @@
       ],
       "sources": [
         { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/colorectal" }
+      ]
+    },
+    {
+      "id": "prostate-adeno",
+      "name_en": "Prostate Adenocarcinoma",
+      "name_bn": "প্রোস্টেট অ্যাডেনোকার্সিনোমা",
+      "organ_id": "prostate",
+      "description_en": "The most common type of prostate cancer, arising in the glandular cells of the prostate.",
+      "description_bn": "সবচেয়ে সাধারণ প্রোস্টেট ক্যান্সার; প্রোস্টেটের গ্রন্থি কোষে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often no early symptoms", "text_bn": "প্রথম দিকে প্রায়ই কোনো লক্ষণ থাকে না" },
+        { "text_en": "Difficulty or frequent need to urinate", "text_bn": "প্রস্রাবে অসুবিধা বা বারবার প্রস্রাবের প্রয়োজন" },
+        { "text_en": "Weak urine stream or blood in urine", "text_bn": "দুর্বল প্রস্রাবের ধারা বা প্রস্রাবে রক্ত" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend discussing prostate screening with your doctor at the recommended ages", "text_bn": "অনেক চিকিৎসক নির্ধারিত বয়সে ডাক্তারের সাথে প্রোস্টেট স্ক্রিনিং নিয়ে আলোচনার পরামর্শ দেন" },
+        { "text_en": "Maintain a healthy weight and stay physically active", "text_bn": "সুস্থ ওজন বজায় রাখুন এবং শারীরিকভাবে সক্রিয় থাকুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent difficulty or pain when urinating", "text_bn": "প্রস্রাবে স্থায়ী অসুবিধা বা ব্যথা" },
+        { "text_en": "Blood in the urine or semen", "text_bn": "প্রস্রাব বা বীর্যে রক্ত" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Prostate Cancer", "url": "https://www.cancer.org/cancer/types/prostate-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/prostate" }
+      ]
+    },
+    {
+      "id": "prostate-small-cell",
+      "name_en": "Small Cell Carcinoma of the Prostate",
+      "name_bn": "প্রোস্টেটের স্মল সেল কার্সিনোমা",
+      "organ_id": "prostate",
+      "description_en": "A rare and aggressive prostate cancer that tends to grow and spread quickly.",
+      "description_bn": "বিরল ও আক্রমণাত্মক প্রোস্টেট ক্যান্সার যা দ্রুত বাড়ে ও ছড়িয়ে পড়ে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Urinary obstruction or difficulty urinating", "text_bn": "প্রস্রাবের পথে বাধা বা প্রস্রাব করতে অসুবিধা" },
+        { "text_en": "Pelvic or bone pain", "text_bn": "শ্রোণি বা হাড়ে ব্যথা" },
+        { "text_en": "Blood in urine or unexplained weight loss", "text_bn": "প্রস্রাবে রক্ত বা অব্যক্ত ওজন হ্রাস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend regular check-ups and reporting urinary changes early", "text_bn": "অনেক চিকিৎসক নিয়মিত চেক-আপ ও প্রস্রাবের পরিবর্তন দ্রুত জানানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in urine or difficulty urinating", "text_bn": "প্রস্রাবে রক্ত বা প্রস্রাব করতে অসুবিধা" },
+        { "text_en": "New pelvic or bone pain", "text_bn": "নতুন শ্রোণি বা হাড়ে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/prostate" }
+      ]
+    },
+    {
+      "id": "prostate-neuroendocrine",
+      "name_en": "Neuroendocrine Tumor of the Prostate",
+      "name_bn": "প্রোস্টেটের নিউরোএন্ডোক্রাইন টিউমার",
+      "organ_id": "prostate",
+      "description_en": "A rare prostate tumor arising from hormone-producing neuroendocrine cells.",
+      "description_bn": "হরমোন উৎপাদনকারী নিউরোএন্ডোক্রাইন কোষে উৎপন্ন বিরল প্রোস্টেট টিউমার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often similar to other prostate cancers", "text_bn": "প্রায়ই অন্য প্রোস্টেট ক্যান্সারের মতো লক্ষণ" },
+        { "text_en": "Urinary symptoms or pelvic discomfort", "text_bn": "প্রস্রাবের লক্ষণ বা শ্রোণিতে অস্বস্তি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend routine check-ups", "text_bn": "অনেক চিকিৎসক নিয়মিত চেক-আপের পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent urinary symptoms or pelvic pain", "text_bn": "স্থায়ী প্রস্রাবের লক্ষণ বা শ্রোণিতে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/prostate" }
+      ]
+    },
+    {
+      "id": "thyroid-papillary",
+      "name_en": "Papillary Thyroid Cancer",
+      "name_bn": "প্যাপিলারি থাইরয়েড ক্যান্সার",
+      "organ_id": "thyroid",
+      "description_en": "The most common thyroid cancer, typically slow-growing and highly treatable.",
+      "description_bn": "সবচেয়ে সাধারণ থাইরয়েড ক্যান্সার; সাধারণত ধীরে বাড়ে এবং অত্যন্ত চিকিৎসাযোগ্য।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A lump or swelling in the neck", "text_bn": "ঘাড়ে পিণ্ড বা ফোলা ভাব" },
+        { "text_en": "Change in voice or hoarseness", "text_bn": "কণ্ঠস্বর পরিবর্তন বা কর্কশ ভাব" },
+        { "text_en": "Difficulty swallowing or breathing", "text_bn": "গিলতে বা শ্বাস নিতে অসুবিধা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no strong prevention measures; many doctors recommend reporting any new neck lump", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই; অনেক চিকিৎসক ঘাড়ে যেকোনো নতুন পিণ্ড জানানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new lump or swelling in the neck", "text_bn": "ঘাড়ে নতুন পিণ্ড বা ফোলা ভাব" },
+        { "text_en": "Persistent hoarseness or swallowing difficulty", "text_bn": "স্থায়ী কর্কশ ভাব বা গিলতে অসুবিধা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Thyroid Cancer", "url": "https://www.cancer.org/cancer/types/thyroid-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/thyroid" }
+      ]
+    },
+    {
+      "id": "thyroid-follicular",
+      "name_en": "Follicular Thyroid Cancer",
+      "name_bn": "ফলিকুলার থাইরয়েড ক্যান্সার",
+      "organ_id": "thyroid",
+      "description_en": "The second most common thyroid cancer, arising from follicular cells of the thyroid.",
+      "description_bn": "দ্বিতীয় সবচেয়ে সাধারণ থাইরয়েড ক্যান্সার; থাইরয়েডের ফলিকুলার কোষে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A neck lump or swelling", "text_bn": "ঘাড়ে পিণ্ড বা ফোলা ভাব" },
+        { "text_en": "Neck pain or voice changes", "text_bn": "ঘাড়ে ব্যথা বা কণ্ঠস্বর পরিবর্তন" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend monitoring any neck mass", "text_bn": "অনেক চিকিৎসক ঘাড়ের যেকোনো গোটা পর্যবেক্ষণের পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new or growing neck lump", "text_bn": "নতুন বা বাড়তে থাকা ঘাড়ের পিণ্ড" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Thyroid Cancer", "url": "https://www.cancer.org/cancer/types/thyroid-cancer.html" }
+      ]
+    },
+    {
+      "id": "thyroid-medullary",
+      "name_en": "Medullary Thyroid Cancer",
+      "name_bn": "মেডুলারি থাইরয়েড ক্যান্সার",
+      "organ_id": "thyroid",
+      "description_en": "A less common thyroid cancer arising from parafollicular C-cells that produce calcitonin.",
+      "description_bn": "কম সাধারণ থাইরয়েড ক্যান্সার; ক্যালসিটোনিন উৎপাদনকারী প্যারাফলিকুলার সি-কোষে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Neck lump or swelling", "text_bn": "ঘাড়ে পিণ্ড বা ফোলা ভাব" },
+        { "text_en": "Diarrhea or flushing in some cases", "text_bn": "কিছু ক্ষেত্রে ডায়রিয়া বা লালচে ভাব" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Families with a known genetic risk are advised by many doctors to discuss screening", "text_bn": "পরিচিত জিনগত ঝুঁকি থাকলে অনেক চিকিৎসক স্ক্রিনিং নিয়ে আলোচনার পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new neck lump or unexplained symptoms", "text_bn": "ঘাড়ে নতুন পিণ্ড বা অব্যক্ত লক্ষণ" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/thyroid" }
+      ]
+    },
+    {
+      "id": "thyroid-anaplastic",
+      "name_en": "Anaplastic Thyroid Cancer",
+      "name_bn": "অ্যানাপ্লাস্টিক থাইরয়েড ক্যান্সার",
+      "organ_id": "thyroid",
+      "description_en": "A rare and very aggressive thyroid cancer that grows rapidly.",
+      "description_bn": "বিরল ও অত্যন্ত আক্রমণাত্মক থাইরয়েড ক্যান্সার যা দ্রুত বাড়ে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A rapidly growing neck lump", "text_bn": "দ্রুত বাড়তে থাকা ঘাড়ের পিণ্ড" },
+        { "text_en": "Difficulty breathing or swallowing", "text_bn": "শ্বাস নিতে বা গিলতে অসুবিধা" },
+        { "text_en": "Hoarseness and neck pain", "text_bn": "কর্কশ ভাব ও ঘাড়ে ব্যথা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors emphasize prompt medical attention for a rapidly growing neck mass", "text_bn": "অনেক চিকিৎসক দ্রুত বাড়তে থাকা ঘাড়ের গোটার জন্য দ্রুত চিকিৎসা নেওয়ার উপর জোর দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A rapidly growing neck lump", "text_bn": "দ্রুত বাড়তে থাকা ঘাড়ের পিণ্ড" },
+        { "text_en": "Difficulty breathing or swallowing", "text_bn": "শ্বাস নিতে বা গিলতে অসুবিধা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Thyroid Cancer", "url": "https://www.cancer.org/cancer/types/thyroid-cancer.html" }
+      ]
+    },
+    {
+      "id": "thyroid-lymphoma",
+      "name_en": "Thyroid Lymphoma",
+      "name_bn": "থাইরয়েড লিম্ফোমা",
+      "organ_id": "thyroid",
+      "description_en": "A rare cancer of immune cells that develops in the thyroid gland.",
+      "description_bn": "থাইরয়েড গ্রন্থিতে বিকশিত ইমিউন কোষের বিরল ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A neck mass that grows quickly", "text_bn": "দ্রুত বাড়তে থাকা ঘাড়ের গোটা" },
+        { "text_en": "Difficulty breathing or swallowing", "text_bn": "শ্বাস নিতে বা গিলতে অসুবিধা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A rapidly growing neck mass", "text_bn": "দ্রুত বাড়তে থাকা ঘাড়ের গোটা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/thyroid" }
+      ]
+    },
+    {
+      "id": "liver-hcc",
+      "name_en": "Hepatocellular Carcinoma",
+      "name_bn": "হেপাটোসেলুলার কার্সিনোমা",
+      "organ_id": "liver",
+      "description_en": "The most common type of primary liver cancer, often linked to chronic liver disease or hepatitis.",
+      "description_bn": "সবচেয়ে সাধারণ প্রাথমিক যকৃত ক্যান্সার; প্রায়ই দীর্ঘস্থায়ী যকৃত রোগ বা হেপাটাইটিসের সাথে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often no symptoms in early stages", "text_bn": "প্রথম দিকে প্রায়ই কোনো লক্ষণ থাকে না" },
+        { "text_en": "Pain in the upper right abdomen", "text_bn": "পেটের উপরের ডান দিকে ব্যথা" },
+        { "text_en": "Unexplained weight loss or jaundice", "text_bn": "অব্যক্ত ওজন হ্রাস বা জন্ডিস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend hepatitis B vaccination and treatment for hepatitis B or C", "text_bn": "অনেক চিকিৎসক হেপাটাইটিস বি টিকা ও হেপাটাইটিস বি/সি চিকিৎসার পরামর্শ দেন" },
+        { "text_en": "Limit alcohol intake", "text_bn": "অ্যালকোহল গ্রহণ সীমিত করুন" },
+        { "text_en": "Maintain a healthy weight to reduce fatty liver risk", "text_bn": "ফ্যাটি লিভার ঝুঁকি কমাতে সুস্থ ওজন বজায় রাখুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent upper abdominal pain", "text_bn": "স্থায়ী উপরের পেটে ব্যথা" },
+        { "text_en": "Jaundice or unexplained weight loss", "text_bn": "জন্ডিস বা অব্যক্ত ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Liver Cancer", "url": "https://www.cancer.org/cancer/types/liver-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/liver" }
+      ]
+    },
+    {
+      "id": "liver-cholangiocarcinoma",
+      "name_en": "Intrahepatic Cholangiocarcinoma",
+      "name_bn": "ইন্ট্রাহেপ্যাটিক কোলাঞ্জিওকার্সিনোমা",
+      "organ_id": "liver",
+      "description_en": "A cancer of the bile ducts within the liver.",
+      "description_bn": "যকৃতের ভেতরের পিত্ত নালির ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Jaundice (yellowing of skin and eyes)", "text_bn": "জন্ডিস (ত্বক ও চোখ হলদে হয়ে যাওয়া)" },
+        { "text_en": "Abdominal pain or itching", "text_bn": "পেটে ব্যথা বা চুলকানি" },
+        { "text_en": "Weight loss and fatigue", "text_bn": "ওজন হ্রাস ও ক্লান্তি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend treating chronic liver disease and avoiding liver-damaging habits", "text_bn": "অনেক চিকিৎসক দীর্ঘস্থায়ী যকৃত রোগের চিকিৎসা ও যকৃত-ক্ষতিকর অভ্যাস এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Jaundice or persistent abdominal pain", "text_bn": "জন্ডিস বা স্থায়ী পেটে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/liver" }
+      ]
+    },
+    {
+      "id": "liver-angiosarcoma",
+      "name_en": "Angiosarcoma of the Liver",
+      "name_bn": "যকৃতের অ্যাঞ্জিওসারকোমা",
+      "organ_id": "liver",
+      "description_en": "A rare, aggressive cancer of the blood vessel cells in the liver, sometimes linked to chemical exposure.",
+      "description_bn": "যকৃতের রক্তনালি কোষের বিরল, আক্রমণাত্মক ক্যান্সার; কখনো কখনো রাসায়নিক সংস্পর্শের সাথে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain and swelling", "text_bn": "পেটে ব্যথা ও ফোলা ভাব" },
+        { "text_en": "Weight loss and fatigue", "text_bn": "ওজন হ্রাস ও ক্লান্তি" },
+        { "text_en": "Jaundice", "text_bn": "জন্ডিস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding occupational exposure to certain chemicals such as vinyl chloride", "text_bn": "অনেক চিকিৎসক ভিনাইল ক্লোরাইডের মতো নির্দিষ্ট রাসায়নিকের পেশাগত সংস্পর্শ এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal pain or swelling", "text_bn": "স্থায়ী পেটে ব্যথা বা ফোলা ভাব" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/liver" }
+      ]
+    },
+    {
+      "id": "liver-hepatoblastoma",
+      "name_en": "Hepatoblastoma",
+      "name_bn": "হেপাটোব্লাস্টোমা",
+      "organ_id": "liver",
+      "description_en": "A rare liver cancer that mainly affects young children.",
+      "description_bn": "বিরল যকৃত ক্যান্সার যা প্রধানত ছোট শিশুদের হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A painless abdominal mass in a child", "text_bn": "শিশুর পেটে ব্যথাহীন গোটা" },
+        { "text_en": "Abdominal swelling or loss of appetite", "text_bn": "পেট ফোলা ভাব বা খাবারে অরুচি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures; many doctors recommend early medical review of any abdominal mass", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই; অনেক চিকিৎসক পেটের যেকোনো গোটা দ্রুত চিকিৎসককে দেখানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "An abdominal mass or swelling in a child", "text_bn": "শিশুর পেটে গোটা বা ফোলা ভাব" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society", "url": "https://www.cancer.org/cancer/types/cancer-in-children.html" }
+      ]
+    },
+    {
+      "id": "liver-lymphoma",
+      "name_en": "Liver Lymphoma",
+      "name_bn": "যকৃত লিম্ফোমা",
+      "organ_id": "liver",
+      "description_en": "A rare cancer of immune cells that arises in the liver.",
+      "description_bn": "যকৃতে উৎপন্ন ইমিউন কোষের বিরল ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain or swelling", "text_bn": "পেটে ব্যথা বা ফোলা ভাব" },
+        { "text_en": "Fever, night sweats, or weight loss", "text_bn": "জ্বর, রাতে ঘাম বা ওজন হ্রাস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal symptoms, fever, or weight loss", "text_bn": "স্থায়ী পেটের লক্ষণ, জ্বর বা ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lymphoma", "url": "https://www.cancer.org/cancer/types/lymphoma.html" }
       ]
     }
   ]
