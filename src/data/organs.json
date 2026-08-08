@@ -74,7 +74,7 @@
       "name_bn": "পাকস্থলী",
       "model_mesh_id": "stomach",
       "model": { "type": "sphere", "position": { "x": -0.04, "y": 1.06, "z": 0.18 }, "scale": 0.1 },
-      "cancers": []
+      "cancers": ["stomach-adeno", "stomach-gist", "stomach-lymphoma", "stomach-carcinoid"]
     },
     {
       "id": "liver",
@@ -90,7 +90,7 @@
       "name_bn": "অগ্ন্যাশয়",
       "model_mesh_id": "pancreas",
       "model": { "type": "sphere", "position": { "x": 0.09, "y": 1.03, "z": 0.05 }, "scale": 0.07 },
-      "cancers": []
+      "cancers": ["pancreas-ductal-adeno", "pancreas-net", "pancreas-acinar", "pancreatoblastoma"]
     },
     {
       "id": "kidney",
@@ -98,7 +98,7 @@
       "name_bn": "কিডনি",
       "model_mesh_id": "kidney",
       "model": { "type": "sphere", "position": { "x": 0.2, "y": 1.06, "z": -0.16 }, "scale": 0.09 },
-      "cancers": []
+      "cancers": ["kidney-rcc", "kidney-urothelial", "kidney-wilms", "kidney-sarcoma"]
     },
     {
       "id": "bladder",
@@ -882,6 +882,284 @@
       ],
       "sources": [
         { "label": "American Cancer Society - Lymphoma", "url": "https://www.cancer.org/cancer/types/lymphoma.html" }
+      ]
+    },
+    {
+      "id": "stomach-adeno",
+      "name_en": "Gastric Adenocarcinoma",
+      "name_bn": "গ্যাস্ট্রিক অ্যাডেনোকার্সিনোমা",
+      "organ_id": "stomach",
+      "description_en": "The most common type of stomach cancer, arising in the glandular lining of the stomach.",
+      "description_bn": "সবচেয়ে সাধারণ পাকস্থলী ক্যান্সার; পাকস্থলীর গ্রন্থিময় আস্তরণে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Indigestion, heartburn, or feeling full after small meals", "text_bn": "বদহজম, বুক জ্বালা বা অল্প খাবারে ভরা ভাব" },
+        { "text_en": "Unexplained weight loss or poor appetite", "text_bn": "অব্যক্ত ওজন হ্রাস বা খাবারে অরুচি" },
+        { "text_en": "Blood in stool or persistent abdominal pain", "text_bn": "মলে রক্ত বা স্থায়ী পেটে ব্যথা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend treating H. pylori infection if present", "text_bn": "অনেক চিকিৎসক উপস্থিত থাকলে এইচ. পাইলোরি সংক্রমণ চিকিৎসার পরামর্শ দেন" },
+        { "text_en": "Eat plenty of fruits and vegetables and limit salty and smoked foods", "text_bn": "প্রচুর ফলমূল ও সবজি খান এবং লবণাক্ত ও ধূমায়িত খাবার সীমিত করুন" },
+        { "text_en": "Avoid tobacco and limit alcohol", "text_bn": "তামাক এড়িয়ে চলুন এবং অ্যালকোহল সীমিত করুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent indigestion, heartburn, or abdominal pain", "text_bn": "স্থায়ী বদহজম, বুক জ্বালা বা পেটে ব্যথা" },
+        { "text_en": "Blood in the stool or unexplained weight loss", "text_bn": "মলে রক্ত বা অব্যক্ত ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Stomach Cancer", "url": "https://www.cancer.org/cancer/types/stomach-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/stomach" }
+      ]
+    },
+    {
+      "id": "stomach-gist",
+      "name_en": "Gastrointestinal Stromal Tumor (GIST)",
+      "name_bn": "গ্যাস্ট্রোইনটেস্টাইনাল স্ট্রোমাল টিউমার (জিআইএসটি)",
+      "organ_id": "stomach",
+      "description_en": "A rare tumor arising from specialized pacemaker cells of the digestive tract wall, most common in the stomach.",
+      "description_bn": "পাচনতন্ত্রের দেয়ালের বিশেষ কোষে উৎপন্ন বিরল টিউমার; পাকস্থলীতেই সবচেয়ে বেশি হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain or a feeling of fullness", "text_bn": "পেটে ব্যথা বা ভরা ভাব" },
+        { "text_en": "Bleeding leading to dark stools or anemia", "text_bn": "রক্তক্ষরণে গাঢ় মল বা রক্তশূন্যতা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no known specific prevention measures", "text_bn": "নির্দিষ্ট কোনো প্রতিরোধ ব্যবস্থা জানা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal pain or dark stools", "text_bn": "স্থায়ী পেটে ব্যথা বা গাঢ় মল" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - GIST", "url": "https://www.cancer.org/cancer/types/gastrointestinal-stromal-tumor.html" }
+      ]
+    },
+    {
+      "id": "stomach-lymphoma",
+      "name_en": "Gastric Lymphoma",
+      "name_bn": "গ্যাস্ট্রিক লিম্ফোমা",
+      "organ_id": "stomach",
+      "description_en": "A cancer of immune cells in the stomach wall, often linked to H. pylori infection.",
+      "description_bn": "পাকস্থলীর দেয়ালের ইমিউন কোষের ক্যান্সার; প্রায়ই এইচ. পাইলোরি সংক্রমণের সাথে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain or bloating", "text_bn": "পেটে ব্যথা বা ফোলা ভাব" },
+        { "text_en": "Nausea, poor appetite, or weight loss", "text_bn": "বমি ভাব, খাবারে অরুচি বা ওজন হ্রাস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend treating H. pylori infection when present", "text_bn": "অনেক চিকিৎসক উপস্থিত থাকলে এইচ. পাইলোরি সংক্রমণ চিকিৎসার পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal pain, bloating, or weight loss", "text_bn": "স্থায়ী পেটে ব্যথা, ফোলা ভাব বা ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/stomach" }
+      ]
+    },
+    {
+      "id": "stomach-carcinoid",
+      "name_en": "Gastric Carcinoid / Neuroendocrine Tumor",
+      "name_bn": "গ্যাস্ট্রিক কার্সিনয়েড / নিউরোএন্ডোক্রাইন টিউমার",
+      "organ_id": "stomach",
+      "description_en": "A usually slow-growing neuroendocrine tumor of the stomach.",
+      "description_bn": "পাকস্থলীর সাধারণত ধীরে বর্ধনশীল নিউরোএন্ডোক্রাইন টিউমার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often no symptoms; found during endoscopy", "text_bn": "প্রায়ই কোনো লক্ষণ থাকে না; এন্ডোস্কপিতে ধরা পড়ে" },
+        { "text_en": "Abdominal pain or bleeding in some cases", "text_bn": "কিছু ক্ষেত্রে পেটে ব্যথা বা রক্তক্ষরণ" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend treating conditions that raise stomach acid exposure", "text_bn": "অনেক চিকিৎসক পাকস্থলীতে এসিড এক্সপোজার বাড়ায় এমন অবস্থার চিকিৎসার পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal symptoms or bleeding", "text_bn": "স্থায়ী পেটের লক্ষণ বা রক্তক্ষরণ" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/stomach" }
+      ]
+    },
+    {
+      "id": "pancreas-ductal-adeno",
+      "name_en": "Pancreatic Ductal Adenocarcinoma",
+      "name_bn": "অগ্ন্যাশয়ের ডাক্টাল অ্যাডেনোকার্সিনোমা",
+      "organ_id": "pancreas",
+      "description_en": "The most common type of pancreatic cancer, arising in the duct cells that produce digestive enzymes.",
+      "description_bn": "সবচেয়ে সাধারণ অগ্ন্যাশয় ক্যান্সার; পাচক এনজাইম উৎপাদনকারী নালি কোষে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Yellowing of the skin and eyes (jaundice)", "text_bn": "ত্বক ও চোখ হলদে হয়ে যাওয়া (জন্ডিস)" },
+        { "text_en": "Pain in the upper abdomen that may spread to the back", "text_bn": "পেটের উপরের অংশে ব্যথা যা পিঠে ছড়াতে পারে" },
+        { "text_en": "Unexplained weight loss and loss of appetite", "text_bn": "অব্যক্ত ওজন হ্রাস ও খাবারে অরুচি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend not smoking and limiting alcohol", "text_bn": "অনেক চিকিৎসক ধূমপান না করা ও অ্যালকোহল সীমিত করার পরামর্শ দেন" },
+        { "text_en": "Maintain a healthy weight and stay physically active", "text_bn": "সুস্থ ওজন বজায় রাখুন এবং শারীরিকভাবে সক্রিয় থাকুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Jaundice or persistent upper abdominal pain", "text_bn": "জন্ডিস বা স্থায়ী উপরের পেটে ব্যথা" },
+        { "text_en": "Unexplained weight loss or new diabetes-like symptoms", "text_bn": "অব্যক্ত ওজন হ্রাস বা নতুন ডায়াবেটিস-সদৃশ লক্ষণ" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Pancreatic Cancer", "url": "https://www.cancer.org/cancer/types/pancreatic-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/pancreatic" }
+      ]
+    },
+    {
+      "id": "pancreas-net",
+      "name_en": "Pancreatic Neuroendocrine Tumor (PanNET)",
+      "name_bn": "অগ্ন্যাশয়ের নিউরোএন্ডোক্রাইন টিউমার (প্যানেট)",
+      "organ_id": "pancreas",
+      "description_en": "A less common pancreatic tumor arising from hormone-producing cells; examples include insulinoma and gastrinoma.",
+      "description_bn": "হরমোন উৎপাদনকারী কোষে উৎপন্ন কম সাধারণ অগ্ন্যাশয় টিউমার; যেমন ইনসুলিনোমা ও গ্যাস্ট্রিনোমা।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Symptoms vary by hormone type (e.g., low blood sugar or ulcers)", "text_bn": "লক্ষণ হরমোনের ধরন অনুযায়ী ভিন্ন হয় (যেমন রক্তে শর্করা কমা বা আলসার)" },
+        { "text_en": "Abdominal pain or weight loss", "text_bn": "পেটে ব্যথা বা ওজন হ্রাস" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures for these tumors", "text_bn": "এই টিউমারগুলোর জন্য নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Recurring low blood sugar episodes or unexplained ulcers", "text_bn": "বারবার রক্তে শর্করা কমা বা অব্যক্ত আলসার" },
+        { "text_en": "Persistent abdominal pain or weight loss", "text_bn": "স্থায়ী পেটে ব্যথা বা ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/pancreatic" }
+      ]
+    },
+    {
+      "id": "pancreas-acinar",
+      "name_en": "Acinar Cell Carcinoma of the Pancreas",
+      "name_bn": "অগ্ন্যাশয়ের অ্যাসিনার সেল কার্সিনোমা",
+      "organ_id": "pancreas",
+      "description_en": "A rare pancreatic cancer arising from cells that produce digestive enzymes.",
+      "description_bn": "পাচক এনজাইম উৎপাদনকারী কোষে উৎপন্ন বিরল অগ্ন্যাশয় ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain or a mass", "text_bn": "পেটে ব্যথা বা গোটা" },
+        { "text_en": "Weight loss and digestive upset", "text_bn": "ওজন হ্রাস ও হজমের সমস্যা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal pain or weight loss", "text_bn": "স্থায়ী পেটে ব্যথা বা ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/pancreatic" }
+      ]
+    },
+    {
+      "id": "pancreatoblastoma",
+      "name_en": "Pancreatoblastoma",
+      "name_bn": "প্যানক্রিয়াটোব্লাস্টোমা",
+      "organ_id": "pancreas",
+      "description_en": "A rare pancreatic tumor occurring mainly in young children.",
+      "description_bn": "বিরল অগ্ন্যাশয় টিউমার যা প্রধানত ছোট শিশুদের হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "An abdominal mass or swelling", "text_bn": "পেটে গোটা বা ফোলা ভাব" },
+        { "text_en": "Abdominal pain or poor appetite", "text_bn": "পেটে ব্যথা বা খাবারে অরুচি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "An abdominal mass or persistent pain in a child", "text_bn": "শিশুর পেটে গোটা বা স্থায়ী ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/pancreatic" }
+      ]
+    },
+    {
+      "id": "kidney-rcc",
+      "name_en": "Renal Cell Carcinoma",
+      "name_bn": "রেনাল সেল কার্সিনোমা",
+      "organ_id": "kidney",
+      "description_en": "The most common type of kidney cancer in adults, with subtypes such as clear cell and papillary.",
+      "description_bn": "প্রাপ্তবয়স্কদের সবচেয়ে সাধারণ কিডনি ক্যান্সার; যেমন ক্লিয়ার সেল ও প্যাপিলারি উপপ্রকার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "A lump or mass in the side or abdomen", "text_bn": "কোমর বা পেটের পাশে গোটা" },
+        { "text_en": "Persistent back or side pain", "text_bn": "স্থায়ী পিঠ বা কোমরে ব্যথা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend not smoking", "text_bn": "অনেক চিকিৎসক ধূমপান না করার পরামর্শ দেন" },
+        { "text_en": "Maintain a healthy weight and control blood pressure", "text_bn": "সুস্থ ওজন বজায় রাখুন এবং রক্তচাপ নিয়ন্ত্রণে রাখুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "A new lump or persistent side pain", "text_bn": "নতুন গোটা বা স্থায়ী কোমরে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Kidney Cancer", "url": "https://www.cancer.org/cancer/types/kidney-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/kidney" }
+      ]
+    },
+    {
+      "id": "kidney-urothelial",
+      "name_en": "Urothelial Carcinoma of the Renal Pelvis",
+      "name_bn": "রেনাল পেলভিসের ইউরোথেলিয়াল কার্সিনoma",
+      "organ_id": "kidney",
+      "description_en": "A kidney cancer arising in the lining of the renal pelvis, similar to bladder cancer.",
+      "description_bn": "রেনাল পেলভিসের আস্তরণে উৎপন্ন কিডনি ক্যান্সার; মূত্রাশয় ক্যান্সারের মতো।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Blood in the urine", "text_bn": "প্রস্রাবে রক্ত" },
+        { "text_en": "Pain or burning during urination", "text_bn": "প্রস্রাবের সময় ব্যথা বা জ্বালা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco", "text_bn": "অনেক চিকিৎসক তামাক এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the urine or painful urination", "text_bn": "প্রস্রাবে রক্ত বা বেদনাদায়ক প্রস্রাব" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/kidney" }
+      ]
+    },
+    {
+      "id": "kidney-wilms",
+      "name_en": "Wilms Tumor (Nephroblastoma)",
+      "name_bn": "উইলমস টিউমার (নেফ্রোব্লাস্টোমা)",
+      "organ_id": "kidney",
+      "description_en": "A kidney cancer that mainly affects children.",
+      "description_bn": "কিডনি ক্যান্সার যা প্রধানত শিশুদের হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A painless abdominal mass in a child", "text_bn": "শিশুর পেটে ব্যথাহীন গোটা" },
+        { "text_en": "Blood in the urine or fever", "text_bn": "প্রস্রাবে রক্ত বা জ্বর" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "An abdominal mass or blood in the urine in a child", "text_bn": "শিশুর পেটে গোটা বা প্রস্রাবে রক্ত" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society", "url": "https://www.cancer.org/cancer/types/cancer-in-children.html" }
+      ]
+    },
+    {
+      "id": "kidney-sarcoma",
+      "name_en": "Renal Sarcoma",
+      "name_bn": "রেনাল সারকোমা",
+      "organ_id": "kidney",
+      "description_en": "A rare cancer of connective tissue in the kidney.",
+      "description_bn": "কিডনির সংযোজক টিস্যুর বিরল ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A mass or swelling in the abdomen", "text_bn": "পেটে গোটা বা ফোলা ভাব" },
+        { "text_en": "Pain or blood in the urine", "text_bn": "ব্যথা বা প্রস্রাবে রক্ত" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new abdominal mass or blood in the urine", "text_bn": "পেটে নতুন গোটা বা প্রস্রাবে রক্ত" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/kidney" }
       ]
     }
   ]
