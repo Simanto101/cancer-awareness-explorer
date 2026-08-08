@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import BodyCanvas from "@/components/body/BodyCanvas";
-import { useT, useLang, type Trans } from "@/lib/i18n";
+import InfoPanel from "@/components/InfoPanel";
+import { useT, type Trans } from "@/lib/i18n";
 import { organs, getOrgan } from "@/lib/loadData";
 
 const hint: Trans = {
@@ -10,14 +11,8 @@ const hint: Trans = {
   bn: "একটি অঙ্গ অন্বেষণ করতে চকচকে মার্কারে ক্লিক করুন।",
 };
 
-const selectedHint: Trans = {
-  en: "selected - information panel coming next.",
-  bn: "নির্বাচিত - তথ্য প্যানেল শীঘ্রই আসছে।",
-};
-
 export default function Home() {
   const t = useT();
-  const { lang } = useLang();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = getOrgan(selectedId);
 
@@ -30,11 +25,16 @@ export default function Home() {
       />
       <div className="pointer-events-none absolute inset-x-0 bottom-5 flex justify-center px-4">
         <div className="rounded-full bg-slate-900/80 px-4 py-2 text-center text-xs text-teal-100 shadow-lg md:text-sm">
-          {selected
-            ? `${lang === "en" ? selected.name_en : selected.name_bn} ${t(selectedHint)}`
-            : t(hint)}
+          {t(hint)}
         </div>
       </div>
+      {selected && (
+        <div className="pointer-events-none absolute inset-0 flex items-end md:items-stretch md:justify-end">
+          <div className="pointer-events-auto w-full md:w-[400px] md:max-w-[90vw]">
+            <InfoPanel organ={selected} onClose={() => setSelectedId(null)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

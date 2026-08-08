@@ -14,7 +14,14 @@
       "name_bn": "স্তন",
       "model_mesh_id": "breast",
       "model": { "type": "sphere", "position": { "x": 0.2, "y": 1.3, "z": 0.3 }, "scale": 0.09 },
-      "cancers": []
+      "cancers": [
+        "breast-dcis",
+        "breast-idc",
+        "breast-ilc",
+        "breast-triple-negative",
+        "breast-inflammatory",
+        "breast-paget"
+      ]
     },
     {
       "id": "lung",
@@ -22,7 +29,14 @@
       "name_bn": "ফুসফুস",
       "model_mesh_id": "lung",
       "model": { "type": "sphere", "position": { "x": 0.16, "y": 1.3, "z": 0.14 }, "scale": 0.11 },
-      "cancers": []
+      "cancers": [
+        "lung-sclc",
+        "lung-nsclc-adeno",
+        "lung-nsclc-squamous",
+        "lung-nsclc-large",
+        "lung-carcinoid",
+        "lung-mesothelioma"
+      ]
     },
     {
       "id": "colon",
@@ -30,7 +44,13 @@
       "name_bn": "কোলন",
       "model_mesh_id": "colon",
       "model": { "type": "sphere", "position": { "x": 0.12, "y": 0.74, "z": 0.14 }, "scale": 0.1 },
-      "cancers": []
+      "cancers": [
+        "colon-adeno",
+        "colon-neuroendocrine",
+        "colon-gist",
+        "colon-lymphoma",
+        "colon-carcinoid"
+      ]
     },
     {
       "id": "prostate",
@@ -127,6 +147,438 @@
       "model_mesh_id": "larynx",
       "model": { "type": "sphere", "position": { "x": 0, "y": 1.5, "z": 0.09 }, "scale": 0.05 },
       "cancers": []
+    }
+  ],
+  "cancer_types": [
+    {
+      "id": "breast-dcis",
+      "name_en": "Ductal Carcinoma In Situ (DCIS)",
+      "name_bn": "ডাক্টাল কার্সিনোমা ইন সিটু (ডিসিআইএস)",
+      "organ_id": "breast",
+      "description_en": "Cancer cells confined to the lining of a milk duct that have not spread into nearby breast tissue.",
+      "description_bn": "ক্যান্সার কোষ দুধের নালির আস্তরণে সীমাবদ্ধ থাকে এবং আশেপাশের স্তন টিস্যুতে ছড়ায় না।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often no symptoms; found on routine screening", "text_bn": "প্রায়ই কোনো লক্ষণ থাকে না; নিয়মিত স্ক্রিনিংয়ে ধরা পড়ে" },
+        { "text_en": "Possible small lump or abnormal mammogram finding", "text_bn": "সম্ভাব্য ছোট পিণ্ড বা অস্বাভাবিক ম্যামোগ্রাম ফলাফল" },
+        { "text_en": "Rarely, slight nipple discharge", "text_bn": "বিরল ক্ষেত্রে হালকা স্তনবৃন্ত নিঃসরণ" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend regular breast screening and clinical breast exams", "text_bn": "অনেক চিকিৎসক নিয়মিত স্তন স্ক্রিনিং ও ক্লিনিক্যাল স্তন পরীক্ষার পরামর্শ দেন" },
+        { "text_en": "Maintain a healthy weight and stay physically active", "text_bn": "সুস্থ ওজন বজায় রাখুন এবং শারীরিকভাবে সক্রিয় থাকুন" },
+        { "text_en": "Limit alcohol intake", "text_bn": "অ্যালকোহল গ্রহণ সীমিত করুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new lump or thickening in the breast or armpit", "text_bn": "স্তন বা বগলে নতুন পিণ্ড বা ঘন অংশ" },
+        { "text_en": "Persistent nipple discharge, especially if bloody", "text_bn": "স্থায়ী স্তনবৃন্ত নিঃসরণ, বিশেষত রক্তাক্ত হলে" },
+        { "text_en": "Changes in breast shape, skin, or nipple that do not resolve", "text_bn": "স্তনের আকার, ত্বক বা স্তনবৃন্তের পরিবর্তন যা সেরে যায় না" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Breast Cancer", "url": "https://www.cancer.org/cancer/types/breast-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/breast" }
+      ]
+    },
+    {
+      "id": "breast-idc",
+      "name_en": "Invasive Ductal Carcinoma",
+      "name_bn": "ইনভেসিভ ডাক্টাল কার্সিনোমা",
+      "organ_id": "breast",
+      "description_en": "The most common breast cancer, starting in a milk duct and spreading into surrounding breast tissue.",
+      "description_bn": "সবচেয়ে সাধারণ স্তন ক্যান্সার; দুধের নালিতে শুরু হয়ে আশেপাশের স্তন টিস্যুতে ছড়িয়ে পড়ে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A new lump or hardening in the breast", "text_bn": "স্তনে নতুন পিণ্ড বা শক্ত অংশ" },
+        { "text_en": "Dimpling or puckering of the breast skin", "text_bn": "স্তনের ত্বকে গর্ত বা কুঁচকানো ভাব" },
+        { "text_en": "Nipple turning inward or nipple discharge", "text_bn": "স্তনবৃন্ত ভেতরে ঢোকে যাওয়া বা নিঃসরণ" },
+        { "text_en": "Persistent breast pain or swelling", "text_bn": "স্থায়ী স্তন ব্যথা বা ফোলাভাব" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend regular breast self-awareness and screening", "text_bn": "অনেক চিকিৎসক নিয়মিত স্তন স্ব-সচেতনতা ও স্ক্রিনিংয়ের পরামর্শ দেন" },
+        { "text_en": "Keep a healthy weight and exercise regularly", "text_bn": "সুস্থ ওজন বজায় রাখুন এবং নিয়মিত ব্যায়াম করুন" },
+        { "text_en": "Limit alcohol and avoid tobacco", "text_bn": "অ্যালকোহল সীমিত করুন এবং তামাক এড়িয়ে চলুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Any new breast lump or thickening", "text_bn": "স্তনে যেকোনো নতুন পিণ্ড বা ঘন অংশ" },
+        { "text_en": "Skin changes or nipple discharge that persist", "text_bn": "স্থায়ী ত্বকের পরিবর্তন বা স্তনবৃন্ত নিঃসরণ" },
+        { "text_en": "Breast pain that does not go away", "text_bn": "স্তনে ব্যথা যা সেরে যায় না" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Breast Cancer", "url": "https://www.cancer.org/cancer/types/breast-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/breast" }
+      ]
+    },
+    {
+      "id": "breast-ilc",
+      "name_en": "Invasive Lobular Carcinoma",
+      "name_bn": "ইনভেসিভ লোবুলার কার্সিনোমা",
+      "organ_id": "breast",
+      "description_en": "Breast cancer beginning in the milk-producing glands (lobules) that has spread into nearby tissue.",
+      "description_bn": "দুধ উৎপাদনকারী গ্রন্থিতে (লোবিউল) শুরু হয়ে আশেপাশের টিস্যুতে ছড়িয়ে পড়া স্তন ক্যান্সার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A thickened or full area in the breast rather than a distinct lump", "text_bn": "স্বতন্ত্র পিণ্ডের বদলে স্তনে ঘন বা ভরা অনুভূতি" },
+        { "text_en": "Swelling or a feeling of heaviness in the breast", "text_bn": "স্তনে ফোলাভাব বা ভারী অনুভূতি" },
+        { "text_en": "Change in breast texture or skin appearance", "text_bn": "স্তনের গঠন বা ত্বকের চেহারা পরিবর্তন" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend routine screening for early detection", "text_bn": "অনেক চিকিৎসক প্রাথমিক শনাক্তকরণের জন্য নিয়মিত স্ক্রিনিংয়ের পরামর্শ দেন" },
+        { "text_en": "Exercise regularly and keep a healthy diet", "text_bn": "নিয়মিত ব্যায়াম করুন এবং স্বাস্থ্যকর খাদ্য গ্রহণ করুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new area of thickening or fullness in the breast", "text_bn": "স্তনে নতুন ঘন বা ভরা অংশ" },
+        { "text_en": "Any persistent change in breast appearance", "text_bn": "স্তনের চেহারায় যেকোনো স্থায়ী পরিবর্তন" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Breast Cancer", "url": "https://www.cancer.org/cancer/types/breast-cancer.html" }
+      ]
+    },
+    {
+      "id": "breast-triple-negative",
+      "name_en": "Triple-Negative Breast Cancer",
+      "name_bn": "ট্রিপল-নেগেটিভ স্তন ক্যান্সার",
+      "organ_id": "breast",
+      "description_en": "An aggressive breast cancer that lacks estrogen, progesterone, and HER2 receptors, so it does not respond to those targeted therapies.",
+      "description_bn": "একটি আক্রমণাত্মক স্তন ক্যান্সার যাতে ইস্ট্রোজেন, প্রোজেস্টেরন ও HER2 রিসেপ্টর নেই, তাই ওই টার্গেটেড চিকিৎসায় সাড়া দেয় না।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A firm lump that may be felt more easily than other types", "text_bn": "অন্যান্য ধরনের চেয়ে সহজে ধরা পড়া শক্ত পিণ্ড" },
+        { "text_en": "Breast swelling, redness, or warmth", "text_bn": "স্তনে ফোলাভাব, লালচে ভাব বা গরম অনুভূতি" },
+        { "text_en": "Changes in breast skin or nipple", "text_bn": "স্তনের ত্বক বা স্তনবৃন্তের পরিবর্তন" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend early and regular screening, especially with a family history", "text_bn": "অনেক চিকিৎসক প্রাথমিক ও নিয়মিত স্ক্রিনিংয়ের পরামর্শ দেন, বিশেষত পারিবারিক ইতিহাস থাকলে" },
+        { "text_en": "Maintain a healthy lifestyle with regular physical activity", "text_bn": "নিয়মিত শারীরিক কার্যকলাপসহ সুস্থ জীবনযাপন বজায় রাখুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A new lump or hard area in the breast", "text_bn": "স্তনে নতুন পিণ্ড বা শক্ত অংশ" },
+        { "text_en": "Redness, swelling, or warmth that persists", "text_bn": "স্থায়ী লালচে ভাব, ফোলাভাব বা গরম অনুভূতি" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute - Triple-Negative Breast Cancer", "url": "https://www.cancer.gov/types/breast/triple-negative" },
+        { "label": "American Cancer Society", "url": "https://www.cancer.org/cancer/types/breast-cancer.html" }
+      ]
+    },
+    {
+      "id": "breast-inflammatory",
+      "name_en": "Inflammatory Breast Cancer",
+      "name_bn": "ইনফ্লেমেটরি স্তন ক্যান্সার",
+      "organ_id": "breast",
+      "description_en": "A rare, aggressive breast cancer that blocks lymph vessels, causing the breast to appear red and swollen.",
+      "description_bn": "বিরল ও আক্রমণাত্মক স্তন ক্যান্সার যা লসিকা নালি আটকে দেয়, ফলে স্তন লাল ও ফোলা দেখায়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Redness, swelling, and warmth of the breast", "text_bn": "স্তনের লালচে ভাব, ফোলাভাব ও গরম অনুভূতি" },
+        { "text_en": "Skin that looks like an orange peel (pitting)", "text_bn": "কমলার খোসার মতো দেখতে ত্বক (গর্ত গর্ত ভাব)" },
+        { "text_en": "Rapid increase in breast size", "text_bn": "স্তনের আকার দ্রুত বৃদ্ধি" },
+        { "text_en": "Heaviness, burning, or tenderness", "text_bn": "ভারী ভাব, জ্বালা বা কোমলতা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors emphasize prompt evaluation of any new breast changes", "text_bn": "অনেক চিকিৎসক যেকোনো নতুন স্তন পরিবর্তন দ্রুত পরীক্ষা করানোর উপর জোর দেন" },
+        { "text_en": "Keep a healthy weight and stay active", "text_bn": "সুস্থ ওজন বজায় রাখুন এবং সক্রিয় থাকুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Redness or swelling of the breast that does not improve", "text_bn": "স্তনের লালচে ভাব বা ফোলাভাব যা উন্নত হয় না" },
+        { "text_en": "Rapid change in breast size or appearance", "text_bn": "স্তনের আকার বা চেহারায় দ্রুত পরিবর্তন" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Inflammatory Breast Cancer", "url": "https://www.cancer.org/cancer/types/breast-cancer/about/types-of-breast-cancer/inflammatory-breast-cancer.html" }
+      ]
+    },
+    {
+      "id": "breast-paget",
+      "name_en": "Paget Disease of the Nipple",
+      "name_bn": "স্তনবৃন্তের পেজেট রোগ",
+      "organ_id": "breast",
+      "description_en": "A rare breast cancer that starts in the milk ducts and spreads to the nipple and areola skin.",
+      "description_bn": "বিরল স্তন ক্যান্সার যা দুধের নালিতে শুরু হয়ে স্তনবৃন্ত ও আরিওলার ত্বকে ছড়ায়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Itching, tingling, or redness of the nipple", "text_bn": "স্তনবৃন্তে চুলকানি, শিরশির ভাব বা লালচে ভাব" },
+        { "text_en": "Flaking, crusty, or scaling nipple skin", "text_bn": "স্তনবৃন্তের ত্বক ফাটা, খসখসে বা আঁশের মতো" },
+        { "text_en": "Yellowish or bloody nipple discharge", "text_bn": "হলদে বা রক্তাক্ত স্তনবৃন্ত নিঃসরণ" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend reporting persistent nipple skin changes early", "text_bn": "অনেক চিকিৎসক স্তনবৃন্তের স্থায়ী ত্বক পরিবর্তন দ্রুত জানানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Nipple rash or skin changes that do not heal", "text_bn": "স্তনবৃন্তের ফুসকুড়ি বা ত্বক পরিবর্তন যা সারে না" },
+        { "text_en": "Nipple discharge or persistent itching", "text_bn": "স্তনবৃন্ত নিঃসরণ বা স্থায়ী চুলকানি" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/breast" }
+      ]
+    },
+    {
+      "id": "lung-sclc",
+      "name_en": "Small Cell Lung Cancer (SCLC)",
+      "name_bn": "স্মল সেল লাং ক্যান্সার (এসসিএলসি)",
+      "organ_id": "lung",
+      "description_en": "A fast-growing lung cancer strongly linked to smoking, often spreading early.",
+      "description_bn": "দ্রুত বর্ধনশীল ফুসফুস ক্যান্সার, ধূমপানের সাথে দৃঢ়ভাবে যুক্ত, প্রায়ই প্রথম দিকে ছড়িয়ে পড়ে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "A new or worsening cough", "text_bn": "নতুন বা বাড়তে থাকা কাশি" },
+        { "text_en": "Coughing up blood", "text_bn": "কাশির সাথে রক্ত আসা" },
+        { "text_en": "Chest pain and shortness of breath", "text_bn": "বুকে ব্যথা ও শ্বাসকষ্ট" },
+        { "text_en": "Unexplained weight loss or fatigue", "text_bn": "অব্যক্ত ওজন হ্রাস বা ক্লান্তি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend not smoking and avoiding secondhand smoke", "text_bn": "অনেক চিকিৎসক ধূমপান না করা ও পরোক্ষ ধূমপান এড়ানোর পরামর্শ দেন" },
+        { "text_en": "Test your home for radon", "text_bn": "বাসায় রেডন গ্যাস পরীক্ষা করান" },
+        { "text_en": "Eat a diet rich in fruits and vegetables", "text_bn": "ফলমূল ও সবজিতে সমৃদ্ধ খাদ্য গ্রহণ করুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "A cough that persists for weeks or worsens", "text_bn": "কয়েক সপ্তাহ ধরে থাকা বা বাড়তে থাকা কাশি" },
+        { "text_en": "Coughing up blood", "text_bn": "কাশির সাথে রক্ত আসা" },
+        { "text_en": "Shortness of breath or chest pain", "text_bn": "শ্বাসকষ্ট বা বুকে ব্যথা" },
+        { "text_en": "Unexplained weight loss", "text_bn": "অব্যক্ত ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lung Cancer", "url": "https://www.cancer.org/cancer/types/lung-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/lung" }
+      ]
+    },
+    {
+      "id": "lung-nsclc-adeno",
+      "name_en": "Lung Adenocarcinoma",
+      "name_bn": "ফুসফুসের অ্যাডেনোকার্সিনোমা",
+      "organ_id": "lung",
+      "description_en": "The most common subtype of non-small cell lung cancer, often arising in the outer areas of the lung.",
+      "description_bn": "নন-স্মল সেল লাং ক্যান্সারের সবচেয়ে সাধারণ উপপ্রকার, প্রায়ই ফুসফুসের বাইরের অংশে হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Persistent cough or coughing up blood", "text_bn": "স্থায়ী কাশি বা কাশির সাথে রক্ত" },
+        { "text_en": "Chest pain, hoarseness, or wheezing", "text_bn": "বুকে ব্যথা, কর্কশ স্বর বা শ্বাসকষ্ট" },
+        { "text_en": "Recurring lung infections", "text_bn": "বারবার ফুসফুস সংক্রমণ" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco and secondhand smoke", "text_bn": "অনেক চিকিৎসক তামাক ও পরোক্ষ ধূমপান এড়ানোর পরামর্শ দেন" },
+        { "text_en": "Limit exposure to workplace chemicals and dust", "text_bn": "কর্মক্ষেত্রের রাসায়নিক ও ধুলার সংস্পর্শ সীমিত করুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Cough that will not go away", "text_bn": "কাশি যা সেরে যায় না" },
+        { "text_en": "Coughing up blood", "text_bn": "কাশির সাথে রক্ত আসা" },
+        { "text_en": "Unexplained weight loss or persistent chest pain", "text_bn": "অব্যক্ত ওজন হ্রাস বা স্থায়ী বুকে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lung Cancer", "url": "https://www.cancer.org/cancer/types/lung-cancer.html" }
+      ]
+    },
+    {
+      "id": "lung-nsclc-squamous",
+      "name_en": "Squamous Cell Lung Carcinoma",
+      "name_bn": "স্কোয়ামাস সেল লাং কার্সিনোমা",
+      "organ_id": "lung",
+      "description_en": "A non-small cell lung cancer that typically starts in the lining of the central airways.",
+      "description_bn": "নন-স্মল সেল ফুসফুস ক্যান্সার যা সাধারণত কেন্দ্রীয় শ্বাসনালীর আস্তরণে শুরু হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Cough, sometimes with blood", "text_bn": "কাশি, মাঝে মাঝে রক্তসহ" },
+        { "text_en": "Chest pain or shortness of breath", "text_bn": "বুকে ব্যথা বা শ্বাসকষ্ট" },
+        { "text_en": "Hoarseness or swallowing difficulty", "text_bn": "কর্কশ স্বর বা গিলতে অসুবিধা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend quitting smoking and avoiding tobacco smoke", "text_bn": "অনেক চিকিৎসক ধূমপান ত্যাগ ও তামাকের ধোঁয়া এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent or worsening cough", "text_bn": "স্থায়ী বা বাড়তে থাকা কাশি" },
+        { "text_en": "Coughing up blood", "text_bn": "কাশির সাথে রক্ত আসা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lung Cancer", "url": "https://www.cancer.org/cancer/types/lung-cancer.html" }
+      ]
+    },
+    {
+      "id": "lung-nsclc-large",
+      "name_en": "Large Cell Lung Carcinoma",
+      "name_bn": "লার্জ সেল লাং কার্সিনোমা",
+      "organ_id": "lung",
+      "description_en": "A less-differentiated group of non-small cell lung cancers that tend to grow and spread quickly.",
+      "description_bn": "নন-স্মল সেল ফুসফুস ক্যান্সারের কম বিভেদিত একটি দল যা দ্রুত বাড়ে ও ছড়ায়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "New or persistent cough", "text_bn": "নতুন বা স্থায়ী কাশি" },
+        { "text_en": "Chest pain or breathlessness", "text_bn": "বুকে ব্যথা বা শ্বাসকষ্ট" },
+        { "text_en": "Coughing up blood", "text_bn": "কাশির সাথে রক্ত আসা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding tobacco smoke", "text_bn": "অনেক চিকিৎসক তামাকের ধোঁয়া এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent cough with blood or chest pain", "text_bn": "রক্তসহ স্থায়ী কাশি বা বুকে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lung Cancer", "url": "https://www.cancer.org/cancer/types/lung-cancer.html" }
+      ]
+    },
+    {
+      "id": "lung-carcinoid",
+      "name_en": "Lung Carcinoid Tumor",
+      "name_bn": "ফুসফুসের কার্সিনয়েড টিউমার",
+      "organ_id": "lung",
+      "description_en": "A rare, typically slow-growing neuroendocrine tumor of the lung.",
+      "description_bn": "ফুসফুসের বিরল, সাধারণত ধীরে বর্ধনশীল নিউরোএন্ডোক্রাইন টিউমার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Cough or wheezing", "text_bn": "কাশি বা শ্বাসকষ্ট" },
+        { "text_en": "Coughing up blood in some cases", "text_bn": "কিছু ক্ষেত্রে কাশির সাথে রক্ত" },
+        { "text_en": "Flushing or hormone-related symptoms (rare)", "text_bn": "মুখে লালচে ভাব বা হরমোন-সম্পর্কিত লক্ষণ (বিরল)" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures; many doctors recommend reporting persistent symptoms", "text_bn": "নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই; অনেক চিকিৎসক স্থায়ী লক্ষণ জানানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent cough or wheezing", "text_bn": "স্থায়ী কাশি বা শ্বাসকষ্ট" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/lung" }
+      ]
+    },
+    {
+      "id": "lung-mesothelioma",
+      "name_en": "Mesothelioma",
+      "name_bn": "মেসোথেলিওমা",
+      "organ_id": "lung",
+      "description_en": "A cancer of the mesothelium (the lining around the lungs and other organs), strongly linked to asbestos exposure.",
+      "description_bn": "মেসোথেলিয়ামের (ফুসফুস ও অন্যান্য অঙ্গের চারপাশের আস্তরণ) ক্যান্সার, অ্যাসবেস্টস সংস্পর্শের সাথে দৃঢ়ভাবে যুক্ত।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Shortness of breath and chest pain", "text_bn": "শ্বাসকষ্ট ও বুকে ব্যথা" },
+        { "text_en": "Fluid buildup around the lungs", "text_bn": "ফুসফুসের চারপাশে তরল জমা" },
+        { "text_en": "Weight loss and fatigue", "text_bn": "ওজন হ্রাস ও ক্লান্তি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend avoiding asbestos exposure at work and home", "text_bn": "অনেক চিকিৎসক কর্মক্ষেত্রে ও বাসায় অ্যাসবেস্টস সংস্পর্শ এড়ানোর পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Shortness of breath or chest pain that persists", "text_bn": "স্থায়ী শ্বাসকষ্ট বা বুকে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Mesothelioma", "url": "https://www.cancer.org/cancer/types/malignant-mesothelioma.html" }
+      ]
+    },
+    {
+      "id": "colon-adeno",
+      "name_en": "Colon Adenocarcinoma",
+      "name_bn": "কোলন অ্যাডেনোকার্সিনোমা",
+      "organ_id": "colon",
+      "description_en": "The most common type of colorectal cancer, arising in the glandular cells lining the colon and rectum.",
+      "description_bn": "সবচেয়ে সাধারণ কোলোরেক্টাল ক্যান্সার; কোলন ও মলাশয়ের আস্তরণের গ্রন্থি কোষে উৎপন্ন হয়।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Change in bowel habits lasting more than a few weeks", "text_bn": "কয়েক সপ্তাহের বেশি স্থায়ী মলত্যাগের অভ্যাস পরিবর্তন" },
+        { "text_en": "Blood in the stool or very dark stools", "text_bn": "মলে রক্ত বা খুব গাঢ় মল" },
+        { "text_en": "Persistent abdominal cramps, gas, or pain", "text_bn": "স্থায়ী পেটে খিঁচুনি, গ্যাস বা ব্যথা" },
+        { "text_en": "Feeling the bowel does not empty completely", "text_bn": "মলত্যাগের পরেও মল সম্পূর্ণ খালি না হওয়ার অনুভূতি" },
+        { "text_en": "Unexplained weight loss or fatigue", "text_bn": "অব্যক্ত ওজন হ্রাস বা ক্লান্তি" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend regular colorectal screening at the recommended ages", "text_bn": "অনেক চিকিৎসক নির্ধারিত বয়সে নিয়মিত কোলোরেক্টাল স্ক্রিনিংয়ের পরামর্শ দেন" },
+        { "text_en": "Eat a diet high in fiber, vegetables, and whole grains", "text_bn": "আঁশ, শাকসবজি ও গোটা শস্যে সমৃদ্ধ খাদ্য গ্রহণ করুন" },
+        { "text_en": "Limit red and processed meats", "text_bn": "লাল ও প্রক্রিয়াজাত মাংস সীমিত করুন" },
+        { "text_en": "Stay physically active and maintain a healthy weight", "text_bn": "শারীরিকভাবে সক্রিয় থাকুন ও সুস্থ ওজন বজায় রাখুন" },
+        { "text_en": "Limit alcohol and avoid tobacco", "text_bn": "অ্যালকোহল সীমিত করুন ও তামাক এড়িয়ে চলুন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Blood in the stool", "text_bn": "মলে রক্ত" },
+        { "text_en": "Change in bowel habits lasting more than a few weeks", "text_bn": "কয়েক সপ্তাহের বেশি স্থায়ী মলত্যাগের অভ্যাস পরিবর্তন" },
+        { "text_en": "Persistent abdominal pain or unexplained weight loss", "text_bn": "স্থায়ী পেটে ব্যথা বা অব্যক্ত ওজন হ্রাস" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Colorectal Cancer", "url": "https://www.cancer.org/cancer/types/colon-rectal-cancer.html" },
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/colorectal" }
+      ]
+    },
+    {
+      "id": "colon-neuroendocrine",
+      "name_en": "Colorectal Neuroendocrine Tumor",
+      "name_bn": "কোলোরেক্টাল নিউরোএন্ডোক্রাইন টিউমার",
+      "organ_id": "colon",
+      "description_en": "A rare, often slow-growing tumor arising from hormone-producing cells in the colon or rectum.",
+      "description_bn": "কোলন বা মলাশয়ের হরমোন উৎপাদনকারী কোষে উৎপন্ন বিরল, প্রায়ই ধীরে বর্ধনশীল টিউমার।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often no symptoms; found during screening or scans", "text_bn": "প্রায়ই কোনো লক্ষণ থাকে না; স্ক্রিনিং বা স্ক্যানে ধরা পড়ে" },
+        { "text_en": "Abdominal pain or changes in bowel habits", "text_bn": "পেটে ব্যথা বা মলত্যাগের অভ্যাসে পরিবর্তন" },
+        { "text_en": "Rarely, hormone-related flushing or diarrhea", "text_bn": "বিরল ক্ষেত্রে হরমোন-সম্পর্কিত লালচে ভাব বা ডায়রিয়া" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend routine colorectal screening", "text_bn": "অনেক চিকিৎসক নিয়মিত কোলোরেক্টাল স্ক্রিনিংয়ের পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal symptoms or change in bowel habits", "text_bn": "স্থায়ী পেটের লক্ষণ বা মলত্যাগের অভ্যাস পরিবর্তন" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/colorectal" }
+      ]
+    },
+    {
+      "id": "colon-gist",
+      "name_en": "Gastrointestinal Stromal Tumor (GIST)",
+      "name_bn": "গ্যাস্ট্রোইনটেস্টাইনাল স্ট্রোমাল টিউমার (জিআইএসটি)",
+      "organ_id": "colon",
+      "description_en": "A rare tumor arising from specialized cells in the digestive tract wall; can occur in the colon.",
+      "description_bn": "পাচনতন্ত্রের দেয়ালের বিশেষ কোষে উৎপন্ন বিরল টিউমার; কোলনে হতে পারে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain or a feeling of fullness", "text_bn": "পেটে ব্যথা বা ভরা ভাব" },
+        { "text_en": "Blood in the stool", "text_bn": "মলে রক্ত" },
+        { "text_en": "Fatigue or anemia", "text_bn": "ক্লান্তি বা রক্তশূন্যতা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no known specific prevention measures", "text_bn": "নির্দিষ্ট কোনো প্রতিরোধ ব্যবস্থা জানা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent abdominal pain or blood in the stool", "text_bn": "স্থায়ী পেটে ব্যথা বা মলে রক্ত" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - GIST", "url": "https://www.cancer.org/cancer/types/gastrointestinal-stromal-tumor.html" }
+      ]
+    },
+    {
+      "id": "colon-lymphoma",
+      "name_en": "Colorectal Lymphoma",
+      "name_bn": "কোলোরেক্টাল লিম্ফোমা",
+      "organ_id": "colon",
+      "description_en": "A rare cancer of immune cells (lymphocytes) that can arise in the colon or rectum.",
+      "description_bn": "ইমিউন কোষে (লিম্ফোসাইট) উৎপন্ন বিরল ক্যান্সার যা কোলন বা মলাশয়ে হতে পারে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Abdominal pain or bloating", "text_bn": "পেটে ব্যথা বা ফোলা ভাব" },
+        { "text_en": "Unexplained weight loss or fever", "text_bn": "অব্যক্ত ওজন হ্রাস বা জ্বর" },
+        { "text_en": "Blood in the stool", "text_bn": "মলে রক্ত" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "There are no specific prevention measures for colorectal lymphoma", "text_bn": "কোলোরেক্টাল লিম্ফোমার জন্য নির্দিষ্ট প্রতিরোধ ব্যবস্থা নেই" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Unexplained weight loss, fever, or abdominal symptoms", "text_bn": "অব্যক্ত ওজন হ্রাস, জ্বর বা পেটের লক্ষণ" }
+      ],
+      "sources": [
+        { "label": "American Cancer Society - Lymphoma", "url": "https://www.cancer.org/cancer/types/lymphoma.html" }
+      ]
+    },
+    {
+      "id": "colon-carcinoid",
+      "name_en": "Colon Carcinoid Tumor",
+      "name_bn": "কোলন কার্সিনয়েড টিউমার",
+      "organ_id": "colon",
+      "description_en": "A slow-growing neuroendocrine tumor that can develop in the appendix or colon.",
+      "description_bn": "ধীরে বর্ধনশীল নিউরোএন্ডোক্রাইন টিউমার যা অ্যাপেন্ডিক্স বা কোলনে হতে পারে।",
+      "stages": [],
+      "symptoms": [
+        { "text_en": "Often found incidentally during surgery or scans", "text_bn": "প্রায়ই সার্জারি বা স্ক্যানের সময় ঘটনাক্রমে ধরা পড়ে" },
+        { "text_en": "Flushing, diarrhea, or abdominal pain in some cases", "text_bn": "কিছু ক্ষেত্রে লালচে ভাব, ডায়রিয়া বা পেটে ব্যথা" }
+      ],
+      "general_prevention_tips": [
+        { "text_en": "Many doctors recommend routine colorectal screening", "text_bn": "অনেক চিকিৎসক নিয়মিত কোলোরেক্টাল স্ক্রিনিংয়ের পরামর্শ দেন" }
+      ],
+      "when_to_see_doctor": [
+        { "text_en": "Persistent flushing, diarrhea, or abdominal pain", "text_bn": "স্থায়ী লালচে ভাব, ডায়রিয়া বা পেটে ব্যথা" }
+      ],
+      "sources": [
+        { "label": "National Cancer Institute", "url": "https://www.cancer.gov/types/colorectal" }
+      ]
     }
   ]
 }
